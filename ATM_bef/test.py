@@ -14,7 +14,7 @@ import numpy as np
 import numpy.matlib
 import random
 import torch.nn as nn
-from util import creatdir, get_filepaths, SPP_make, SPP_rec, read_wav, data_generator, valid_generator
+from utils import creatdir, get_filepaths, SPP_make, SPP_rec, read_wav, data_generator, valid_generator
 from model import Enhance, Speaker
 
 from scipy.io import wavfile
