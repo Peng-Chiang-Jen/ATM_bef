@@ -16,7 +16,7 @@ import os
 from torch.utils.data import Dataset
 from tqdm import tqdm
 from util import creatdir, get_filepaths, SPP_make, SPP_rec, read_wav, data_generator, valid_generator
-from new_dataset_lstm1out_mask_model import Enhance, Speaker
+from model import Enhance, Speaker
 
 os.environ["CUDA_VISIBLE_DEVICES"]="2" #Your GPU number, default = 0
 
