@@ -15,7 +15,7 @@ import numpy.matlib
 import random
 import torch.nn as nn
 from util import creatdir, get_filepaths, SPP_make, SPP_rec, read_wav, data_generator, valid_generator
-from new_dataset_lstm1out_mask_model import Enhance, Speaker
+from model import Enhance, Speaker
 
 from scipy.io import wavfile
 
