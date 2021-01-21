@@ -26,10 +26,10 @@ batch_size= 1
 Epoch = 20
 
 ################ Read data #######################################
-clean_path = "/mnt/md2/user_cloudas111031/mix/Concat_TMHINT_train_new/"    # You need to write your own clean data path 
+clean_path = "..."    # You need to write your own clean data path 
 speaker_label = pd.read_csv('TMHINT_new_train_label.csv')   # You need to write your own clean speaker label
 
-noisy_list = np.load('/mnt/md2/user_cloudas111031/BLSTM/code/noisy_list_new.npy')  # read the noisy data from noisy_list_new.npy (have been shuffle already)
+noisy_list = np.load('noisy_list_new.npy')  # read the noisy data from noisy_list_new.npy (have been shuffle already)
 noisy_list = noisy_list.tolist()
 
 idx = int(len(noisy_list)*0.95)
@@ -66,9 +66,6 @@ optimizer_speaker = torch.optim.Adam(speaker_model.parameters(), lr=0.0005)
 
 ######## Start training ############
 print('training...')
-lstm1_out = torch.zeros((1,624,300),dtype=torch.float32)
-lstm2_out = torch.zeros((1,624,300),dtype=torch.float32)
-dense3_out = torch.zeros((624,256),dtype=torch.float32)
 loss_enh = []
 loss_speaker = []
 loss_enh_val = []
